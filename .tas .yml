@@ -14,10 +14,15 @@ preRun:
     # For eg, npm ci, yarn install
     # - npm install
 
+
+preMerge:
+  pattern:
+    -"./test/test.js"
+
 postMerge:
   # glob-pattern for identifying the test files
   pattern:
-   -"test/test.js
+   -"./test/test.js"
     # glob-patterns to discover tests to run in case of postMerge
     # - "./unit_test_folder_A/**/*.spec.ts"
     # - "./unit_test_folder_B/**/*.ts"
