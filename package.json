@@ -10,6 +10,19 @@
     "test": "mocha --config ./test/config/mocha.config.js",
     "coverage": "nyc npm run test"
   },
+  "nyc": {
+    "all": true,
+    "include": [
+      "app/**/*.js"
+    ],
+    "excludes": [
+      "**/*.spec.js"
+    ],
+    "reporter": [
+      "html",
+      "text"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
